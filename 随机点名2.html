@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../JS/kits.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .box {
+        width: 80%;
+        padding: 20px 0;
+        margin: 100px auto;
+        text-align: center;
+      }
+      h2 {
+        height: 80px;
+        line-height: 80px;
+      }
+      button {
+        height: 35px;
+        width: 100px;
+        outline: 0;
+        border: 0px;
+        background: #ad7db0;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      ul {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      li {
+        width: 10%;
+        background: #ad7db0;
+        opacity: 0.8;
+        border-radius: 5px;
+        margin: 3px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>前端就业班42期随机点名</h2>
+      <button>开始点名</button>
+      <ul></ul>
+    </div>
+
+    <script>
+      const arr = [
+        "王达",
+        "曹光皓",
+        "范津津",
+        "蔡安麒",
+        "熊诗琴",
+        "叶晓丹",
+        "唐果锋",
+        "曾恺",
+        "彭晨晨",
+        "冯延彬",
+        "苏换萍",
+        "王笑宵",
+        "黄婷",
+        "罗文学",
+        "陈晓聪",
+        "周成霖",
+        "贝宏",
+        "万志鹏",
+        "许燕玲",
+        "钟海杰",
+        "黄振杰",
+        "方桂泓",
+        "胡家琳",
+        "梁嘉智",
+        "梁运金",
+        "黄景文",
+        "孙雪莲",
+        "邓磊",
+        "李冠盛",
+        "魏嘉铭",
+        "罗荣华",
+        "沈万林",
+        "陈芷琳",
+        "张严心",
+        "万诗怡",
+        "姚超",
+        "温海涛",
+        "黄佳纯",
+        "莫爵飘",
+        "丁远泽",
+        "毛建龙",
+        "黄文强",
+        "黄诗漫",
+        "刘念",
+        "钟志杨",
+        "张锋",
+        "黎烘武",
+        "廖新灏",
+        "彭庭菘",
+        "黄国枫",
+        "龙伟华",
+        "冯海涛",
+        "张康康",
+        "陈迷",
+        "韦才曦",
+        "王锡虎",
+        "杨土铭",
+        "李军团",
+        "曾土明",
+        "杨秋月",
+        "何军",
+        "李耀勇",
+        "陈德钰",
+        "贝佳伟"
+      ];
+      const newArr = arr.map(function(item) {
+        return `<li>${item}</li>`;
+      });
+      document.querySelector("ul").innerHTML = newArr.join("");
+
+      const btn = document.querySelector("button");
+      const li = document.querySelectorAll("li");
+
+      btn.onclick = function() {
+        let index = kits.randomInt(0, arr.length);
+        console.log(index);
+        li.forEach(function(item) {
+          item.style.backgroundColor = " ";
+          if (item === li[index]) {
+            item.style.backgroundColor = kits.randomColor();
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

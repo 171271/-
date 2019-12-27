@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box">
+      <h1>黑马程序猿42期就业班</h1>
+      <h3>看看是谁那么倒霉</h3>
+    </div>
+    <div class="show">
+      <input type="text" class="one" />
+      <button class="but">开始点名</button>
+      <button>清空数据</button>
+    </div>
+    <script src="../JS/kits.js"></script>
+    <script>
+      let r1 = [
+        "王达",
+        "曹光皓",
+        "范津津",
+        "蔡安麒",
+        "熊诗琴",
+        "叶晓丹",
+        "唐果锋",
+        "曾恺",
+        "彭晨晨",
+        "冯延彬",
+        "苏换萍",
+        "王笑宵",
+        "黄婷",
+        "罗文学",
+        "陈晓聪",
+        "周成霖",
+        "贝宏",
+        "万志鹏",
+        "许燕玲",
+        "钟海杰",
+        "黄振杰",
+        "方桂泓",
+        "胡家琳",
+        "梁嘉智",
+        "梁运金",
+        "黄景文",
+        "孙雪莲",
+        "邓磊",
+        "李冠盛",
+        "魏嘉铭",
+        "罗荣华",
+        "沈万林",
+        "陈芷琳",
+        "张严心",
+        "万诗怡",
+        "姚超",
+        "温海涛",
+        "黄佳纯",
+        "莫爵飘",
+        "丁远泽",
+        "毛建龙",
+        "黄文强",
+        "黄诗漫",
+        "刘念",
+        "钟志杨",
+        "张锋",
+        "黎烘武",
+        "廖新灏",
+        "彭庭菘",
+        "黄国枫",
+        "龙伟华",
+        "冯海涛",
+        "张康康",
+        "陈迷",
+        "韦才曦",
+        "王锡虎",
+        "杨土铭",
+        "李军团",
+        "曾土明",
+        "杨秋月",
+        "何军",
+        "李耀勇",
+        "陈德钰",
+        "贝佳伟"
+      ];
+      // let r2 = r1[kits.randomInt(0, 64)];
+      // let r3 = document.querySelector(".one");
+
+      document.querySelector(".but").onclick = function() {
+        // document.querySelector("input").innerHTML = kits.randomInt(
+        //   0,
+        //   r1.length
+        // );
+        document.querySelector("input").placeholder =
+          r1[kits.randomInt(0, r1.length)];
+      };
+      // console.log();
+    </script>
+  </body>
+</html>
